@@ -6,7 +6,7 @@ body {
 #container {
 	width: 1280px;
 	height: 800px;
-	border: solid 1px white;
+	border: solid 1px #AF5826;
 	margin: auto;
 }
 
@@ -318,7 +318,7 @@ a:hover {
 }
 
 #box {
-	width: 1200px;
+	width: 1170px;
 	height: 100px;
 	border: solid 10px #939598;
 	margin: auto;
@@ -332,19 +332,6 @@ a:hover {
 
 }
 
-#box2 {
-	width: 1210px;
-	height: 160px;
-	background-color: #6D6E71;
-	margin: auto;
-	margin-top: -200px;
-	padding-left: 40px; 
-	padding-top: 20px;
-	font-family: navigation;
-	font-size: 1.2em;
-	color: white;
-
-}
 
 #hours {
 	font-family: navigation;
@@ -358,7 +345,7 @@ a:hover {
 
 #facts {
 
-	width: 1270px;
+	width: 1250px;
 	height: 45px;
 	border-style: solid;
 	border-width: 10px;
@@ -372,9 +359,38 @@ a:hover {
 
 }
 
+#click-one {
+	font-size: 1.4em;
+	font-family: navigation;
+	margin-top: 70px;
+	color: white;
+	margin-left: 15px;
+	text-align: center;
+
+}
+
+#click-two {
+	font-size: 1.4em;
+	font-family: navigation;
+	color: white;
+	margin-left: 20px;
+	text-align: center;
+	margin-top: -40px;
+
+}
+
+#click-three {
+	font-size: 1.4em;
+	font-family: navigation;
+	color: white;
+	margin-left: -25px;
+	margin-top: -40px;
+	text-align: center;
+}
+
 #bar {
 	width: 1330px;
-	height: 600px;
+	height: 700px;
 	z-index: -1;
 	margin-left: -20px;
 	margin-top: -10px;
@@ -384,9 +400,28 @@ a:hover {
 #beer1, #beer2, #beer3 {
 	height: 500px;
 	width: 330px;
-	margin-left: 80px;
-	margin-top: -400px;
+	
+}
 
+.glasses-container {
+	margin-top: -420px;
+}
+
+.beer-glass-container {
+	margin-left: 80px;
+	margin-top: -25px;
+	display: inline-block;
+	height: 500px;
+	width: 330px;
+}
+
+.beer-desc {
+	opacity: 0;
+	transition: all .5s ease-in-out;
+}
+
+.beer-glass-container:hover .beer-desc {
+	opacity: 1;
 }
 
 #rectangle {
@@ -395,56 +430,62 @@ a:hover {
 }
 
 #yellow {
-	width: 1000px;
-	height: 600px;
+	width: 950;
+	height: 2000px;
 	background-color: #fbb036;
 	margin-top: 30px;
 	margin: auto;
 	display: none;
+	font-size: 1.5em;
+	font-family: navigation;
+	color: white;
+	padding: 50px;
+	padding-left: 100px;
+
 }
 
 #orange {
-	width: 1000px;
-	height: 600px;
+	width: 900;
+	height: 2000px;
 	background-color: #AF5826;
 	margin-top: 30px;
 	margin: auto;
 	display: none;
+	font-size: 1.5em;
+	font-family: navigation;
+	color: white;
+	padding: 50px;
+	padding-left: 100px;
 }
 
 #brown {
-	width: 1000px;
-	height: 600px;
+	width: 850;
+	height: 800px;
 	background-color: #4d1616;
 	margin-top: 30px;
 	margin: auto;
 	display: none;
+	font-size: 1.5em;
+	font-family: navigation;
+	color: white;
+	padding: 50px;
+	padding-left: 100px;
 }
 
-.quote {
-	font-family: navigation;
+.beer-click {
+	cursor: pointer;
+}
+
+
+#quotes {
+	font-family: subheading;
 	color: white;
 	margin-left: 280px;
 	margin-top: -55px;
-	font-size: 2.1em;
+	font-size: 2em;
 }
 
-#facttwo {
-	margin-top: -35px;
-	display: none;
-}
-
-#factthree {
-	margin-top: -35px;
-	display: none;
-}
-
-#factfour {
-	margin-top: -35px;
-	display: none;
-}
-
-#factfive {
+.singe-quote {
 	margin-top: -35px;
 	display: none;
 }
@@ -510,7 +551,7 @@ a:hover {
 	background-color: #6D6E71;
 	padding: 20px;
 	padding-top: 5px;
-	font-family: news;
+	font-family: navigation;
 	font-size: 1em;
 	color: white;
 	line-height: 20px;
@@ -526,7 +567,7 @@ a:hover {
 	margin-left: 630px;
 	padding: 20px;
 	padding-top: 5px;
-	font-family: news;
+	font-family: navigation;
 	font-size: 1em;
 	color: white;
 	line-height: 20px;
@@ -540,7 +581,7 @@ a:hover {
 	margin-top: 20px;
 	padding: 20px;
 	padding-top: 5px;
-	font-family: news;
+	font-family: navigation;
 	font-size: 1em;
 	color: white;
 	line-height: 20px;
