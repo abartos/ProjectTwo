@@ -6,6 +6,22 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script type="text/javascript" src="script.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				if (typeof document.getElementById('quotes') != "undefined") {
+					soRandom();
+				}
+
+				function soRandom() {
+					var quotes = document.getElementById('quotes').getElementsByClassName('singe-quote');
+					var randomNumber = Math.floor(Math.random() * (quotes.length));
+					console.log(randomNumber);
+					console.log(quotes);
+					quotes[randomNumber].style.display = "block";
+				};
+			});
+		</script>
 		
 		<title>Our Beers</title>
 	</head>
@@ -69,12 +85,12 @@
 
 				<div id="facts">did you know?</div>
 
-				<div class="quote">
-					<div id="factone">Cenosillicaphobia is the fear of an empty beer glass.</div>
-					<div id="facttwo">The strongest beer in the world has a 67.5% alcohol content.</div>
-					<div id="factthree">Beer was not considered an alcoholic beverage in Russia until 2013.</div>
-					<div id="factfour">In the Land of the Pharaohs of Egypt, beer was the national currency.</div>
-					<div id="factfive">You can swim in pools of beer in Austria.</div>
+				<div id="quotes">
+					<div class="singe-quote">cenosillicaphobia is the fear of an empty beer glass.</div>
+					<div class="singe-quote">the strongest beer in the world has a 67.5% alcohol content.</div>
+					<div class="singe-quote">beer was not considered an alcoholic beverage in russia until 2013.</div>
+					<div class="singe-quote">in the land of pharaohs in egypt, beer was the national currency.</div>
+					<div class="singe-quote">you can swim in pools of beer in austria.</div>
 
 				</div>
 
@@ -82,25 +98,230 @@
 
 			<img src="Photos/bartop-01.png" id="bar"></div>
 
-			<div class="glasses">
-				<img src= "Photos/beer-01.png" id= "beer1"></a>
-				<img src= "Photos/beer-02.png" id= "beer2"></a>
-				<img src= "Photos/beer-03.png" id= "beer3"></a>
+			<div class="glasses-container">
+				<div class="beer-glass-container">
+					<div class="beer-desc" id="click-one"> Click to View <br> Ales & Lagers Below</div>
+					<img src= "Photos/beer-01.png" id="beer1" class="beer-click" data-beertype="light"></a>
+				</div>
+				<div class="beer-glass-container">
+					<div class="beer-desc" id="click-two"> Click to View <br> More Ales & Lagers Below</div>
+					<img src= "Photos/beer-02.png" id="beer2" class="beer-click" data-beertype="medium"> </a>
+				</div>
+				<div class="beer-glass-container">
+					<div class="beer-desc" id="click-three"> Click to View <br> Porters & Stouts Below</div>
+					<img src= "Photos/beer-03.png" id="beer3" class="beer-click" data-beertype="dark"></a>
+				</div>
+				
 			</div>
+			<div id="info-box-container"> 
+				<div class="light info-box">
+					<div id="yellow"><h2><b>Lake Day</b></h2>
+  
+									A Session Ale <br>
+									Available Year Round in the Taproom <br><br>
+ 
+									A Pale-Cream hybrid with surprising citra hop flavor, medium in body, medium hop bitterness and aroma.  A tasty standby for all kinds of people.
 
-			<div class="light">
-				<div id="yellow"></div>
+									<br>
+									<br>
+									<br>
+
+									<h2><b>A Little Hoppy </b></h2>
+
+									A Session IPA <br>
+  									Available Seasonally in the Taproom<br><br>
+ 
+									A sessionable beer for hopheads and commoners alike.  The lemon citrusy hop profile is noticeable but pleasant, thanks to loads of whirlpool and dry hop additions.
+
+									<br>
+									<br>
+									<br>
+
+									<h2><b>Ardmore Ale </b></h2>
+  
+									A Hefeweizen <br>
+									Available Seasonally in the Taproom <br><br>
+ 
+									A German Wheat, named by an Englishman, brewed in Maple Grove.  This German Wheat has notes of banana and clove.
+
+									<br>
+									<br>
+									<br>
+
+									<h2><b>Loonacy </b></h2>
+  
+									A Belgian Strong Pale Ale <br>
+									Available Seasonally in the Taproom <br><br>
+ 
+									Belgian Pilsen Malt, US Sterling Hops, and Belgian Ale Yeast produce a moderate bitterness, low hop aroma, a light body and nice Belgian notes. Careful 8.0%!
+
+									<br>
+									<br>
+									<br>
+
+									<h2><b>Patio Pils</b></h2>
+  
+									A Pilsner <br>
+									Available Seasonally in the Taproom<br><br>
+ 
+									OMNI's first lager! This is an american take on the Bohemian Pilsner style; Sterling Hops, Floor Malted Bohemian Pilsner Malt, and Czech lager yeast create a light-medium bodied, moderately bitter beer for summertime on the patio.  OMNI's brand new patio to be precise.
+
+									<br>
+									<br>
+									<br>
+
+									<h2><b>Grateful Graf </b></h2>
+
+									A Malted Cider <br>
+									Available Seasonally in the Taproom <br><br>
+ 
+									A slightly sweet, slightly tart malted cider.  A blend of cider and ale yeasts create a light bodied thirst quencher.
+
+									<br>
+									<br>
+									<br>
+
+									<h2><b>Outside the Loop </b></h2>
+  
+									A Biere de Garde or French Farmhouse Ale <br>
+									Available Seasonally in the Taproom<br><br>
+ 
+									Our collaboration with our friends at Spilled Grain Brewhouse in Annandale.  A French malt backbone combine with local honey from Schmidt's Honey Farm to create a truely unique malt forward brew. Biere de garde was traditionally brewed in modern day France near the Belgium border.  We hope you enjoy this take on one of the few French styles of beer.
+
+
+								</div>
+				</div>
+
+
+				<div class="medium info-box">
+					<div id="orange"><h2><b>RUA</b></h2>
+  
+									A Red Ale w/ Ginger <br>
+									Expected:  Spring, 2016 <br><br>
+ 
+									A light, crisp, and refreshing red with a ginger sweetness and bite.
+
+									<br>
+									<br>
+									<br>
+
+
+									<h2><b>Hopfull</b></h2>
+
+								
+									An India Pale Ale <br>
+									Available Year Round in the Taproom<br><br>
+ 
+									A straightforward, sweeter than most, IPA that lets Simcoe and Amarillo do all the talking.
+
+									<br>
+									<br>
+									<br>
+
+
+									<h2><b>Omnipotent</b></h2>
+
+									A Scotch Ale <br>
+									Available Year Round in the Taproom <br><br>
+ 
+									Warming, Delicious, Rich with all sorts of caramel flavor.
+
+									<br>
+									<br>
+									<br>
+
+									<h2><b>Hopsessed</b></h2>
+
+									A Double India Pale Ale <br>
+									Expected:  Winter, 2016<br><br>
+ 
+									Heavy Green Bullet and Styrian Aurora hop additions give this IPA all kinds of unique hop flavor.
+
+									<br>
+									<br>
+									<br>
+
+									<h2><b>Parti w/Chai</b></h2>
+
+									An English Mild <br>
+									Available Seasonally in the Taproom <br><br>
+ 
+									A second runnings of the mash of Omnipotent create an english mild that we load up with milk sugar, vanilla bean, cinamon, and 8 other spices.  Happy holidays from OMNI Brewing!
+
+									<br>
+									<br>
+									<br>
+
+									<h2><b>Oktoberfest</b></h2>
+
+									
+									A Marzen Style Lager<br>
+									Available Seasonaly in the Taproom<br><br>
+​
+									OMNI's Oktoberfest is a classic Marzen/Oktoberfest style lager. We added biscuit malts to enhance the pleasant breadiness. Prost!
+
+									<br>
+									<br>
+									<br>
+
+									<h2><b>Soaked 2016 MN Cascade</b></h2>
+
+									A Fresh Hop Ale <br>
+									Available Seasonally in the Taproom <br><br>
+​
+									Soaked 2016 is made with 100% Golden Promise malt and fresh Cascade hops grown by Mighty Axe in Ham Lake, MN just 25 miles from OMNI Brewing. These hops are so fresh they traveled from the bine to the kettle in less than 6 hours! This fresh hopped beer is a unique experience that only comes around once a year.
+
+
+									<br>
+									<br>
+									<br>
+
+									<h2><b>Snowprint</b></h2>
+
+									A Doppelbock <br>
+  									Available Seasonally in the Taproom<br><br>
+ 
+									Strong but clean, dark crystal malts give flavors of caramel and roasted malts hints of chocolate, brewed using our Oktoberfest (Bock) yeast and traditional german hops. Prost!
+
+
+					</div>
+				</div>
+
+
+				<div class="dark info-box">
+					<div id="brown"><h2><b>RUA</b></h2>
+									A Sweet Stout<br>
+									Available Seasonally in the Taproom<br><br>
+ 
+									A smooth, not quite coffee, not quite creamy stout with a mild citrus hop flavor and aroma.
+
+
+									<br>
+									<br>
+									<br>
+
+									<h2><b>Muddy Runner</b></h2>
+
+									A Coconut Porter <br>
+									Available Seasonally in the Taproom <br><br>
+ 
+									Toasted Coconut in the fermenter gives this American Porter a coconut nose and strong sweet coconut finish.
+
+									<br>
+									<br>
+									<br>
+
+									<h2><b>Unite!</b></h2>
+									An Imperial Stout<br>
+									Available limitedly in the Taproom<br><br>
+ 
+									Unite! Is a reminder that in a world of divisive politics and bad news pushed to our pockets constantly, we still have more in common than not. Very dark caramel malt and malted oats combine for complex flavors of caramel, roastiness, and black licorice. Unite! is truly a communal libation. 
+
+
+					</div>
+				</div>
 			</div>
-
-
-			<div class="medium">
-				<div id="orange"></div>
-			</div>
-
-
-			<div class="dark">
-				<div id="brown"></div>
-			</div>
+			
 
 			
 			

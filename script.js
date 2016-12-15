@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	
 	$('.drop1').hide();
 
@@ -43,14 +44,6 @@ $(document).ready(function() {
 		$("#beer1").fadeTo("fast", 1);
 	});
 
-	$("#beer1").click(function() {
-		$("#yellow").fadeToggle(200);
-
-	});
-
-
-
-
 	$("#beer2").mouseenter(function() {
 		$("#beer2").fadeTo("fast", 0.75);
 
@@ -58,11 +51,6 @@ $(document).ready(function() {
 
 	$("#beer2").mouseleave(function() {
 		$("#beer2").fadeTo("fast", 1);
-	});
-
-	$("#beer2").click(function() {
-		$("#orange").fadeToggle(200);
-
 	});
 
 
@@ -77,11 +65,17 @@ $(document).ready(function() {
 		$("#beer3").fadeTo("fast", 1);
 	});
 
-	$("#beer3").click(function() {
-		$("#brown").fadeToggle(200);
 
+	$('.beer-click').click(function() {
+		$(".info-box").children().hide();
+		var beerType = $(this).data('beertype');
+		var beerType = "." + beerType
+		console.log($(beerType));
+		$(beerType).children().show();
 	});
 
 });
+
+
 
 
